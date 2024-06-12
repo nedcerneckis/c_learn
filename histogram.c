@@ -13,11 +13,12 @@ int main(){
   while((c = getchar()) != EOF){
     ++nc;
     if (c == ' ' || c == '\n' || c == '\t'){
+      printf("%d", wc);
       wc = 0;
       state = OUT;  
     } else if (state == OUT){
       state = IN;
-      ++wc
+      ++wc;
       ++nw;
     }
   }
